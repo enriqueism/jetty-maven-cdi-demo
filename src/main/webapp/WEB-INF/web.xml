@@ -8,4 +8,16 @@
         <session-timeout>30</session-timeout>
     </session-config>
 
+    <servlet>
+        <servlet-name>SwaggerBootstrap</servlet-name>
+        <servlet-class>rmohr.examples.cdi.RestScanner</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SwaggerBootstrap</servlet-name>
+        <url-pattern>/api-docs/*</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

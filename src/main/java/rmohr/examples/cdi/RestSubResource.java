@@ -4,9 +4,14 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RequestScoped
+@Api
 public class RestSubResource {
 
     @Inject
@@ -14,8 +19,10 @@ public class RestSubResource {
 
     @GET
     @Path("/")
-    public Response get(){
+    @ApiOperation(value = "lala")
+    @Produces("text/plain")
+    public String get(){
         String result = greeting.getText() + "\n I am the subresource!";
-        return Response.status(200).entity(result).build();
+        return result;
     }
 }
