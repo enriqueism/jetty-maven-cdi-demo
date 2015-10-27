@@ -9,7 +9,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @Path("/")
-@Api(value = "/", description = "Testdescription")
+@Api(value = "/", description = "My root resource")
 public class RestResource {
 
     @Inject
@@ -19,7 +19,7 @@ public class RestResource {
     RestSubResource subResource;
 
     @GET
-    @ApiOperation(value = "description X", notes = "whatever")
+    @ApiOperation(value = "Print something injected", notes = "Yes, weld injected the resource here")
     public Response printMessage() {
         String result = greeting.getText() + "\n I am the root resource!";
         return Response.status(200).entity(result).build();
