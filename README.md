@@ -23,7 +23,7 @@ When the application is started, you can look up the swagger documentation on
 to confince swagger to scan your resteasy resources. The documentation is not
 that good on that part. You can find the scanner which is also the servlet
 which provides the documentation
-[here](../blob/master/src/main/java/rmohr/examples/cdi/RestScanner.java).
+[here](../master/src/main/java/rmohr/examples/cdi/RestScanner.java).
 
 
 Visit <http://localhost:8080/api> multiple times to see the Greeter service in
