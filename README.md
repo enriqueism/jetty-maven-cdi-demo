@@ -20,7 +20,7 @@ $ mvn jetty:run
 When the application is started, you can look up the swagger documentation on
 <http://localhost:8080/api-docs/swagger.json> or
 <http://localhost:8080/api-docs/swagger.yaml>. The most difficult part here is
-to confince swagger to scan your resteasy resources. The documentation is not
+to convince swagger to scan your resteasy resources. The documentation is not
 that good on that part. You can find the scanner which is also the servlet
 which provides the documentation
 [here](../master/src/main/java/rmohr/examples/cdi/RestScanner.java).
